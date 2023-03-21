@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "4cbb59a4-09cf-4f19-a1f8-7e2e989e4582",
+		"name": "farm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "get Application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms/applications/count",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"applications",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueryParam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms/applications?pageSize=4&page=3&type=flexi_credit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"applications"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "4"
+								},
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "type",
+									"value": "flexi_credit"
+								},
+								{
+									"key": "status",
+									"value": "accepted",
+									"disabled": true
+								},
+								{
+									"key": "acresFarmed",
+									"value": "900",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Application",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms/applications/12345",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"applications",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n      \"id\": 12345,\n      \"type\": \"flexi_creditttt\",\n      \"amountRequested\": 58600.0,\n      \"status\": \"accepted\",\n      \"productId\": 1435004,\n      \"farmerId\": 1215200\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/farms/applications/12345",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"applications",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n      \"id\": 12333334333333,\n      \"type\": \"flexi_credit\",\n      \"amountRequested\": 58600.0,\n      \"status\": \"accepted\",\n      \"productId\": 1435004,\n      \"farmerId\": 1215200\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/farms/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farmers",
+			"item": [
+				{
+					"name": "Get Farmers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms/farmers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"farmers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Farmer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"id\": 1945189,\n            \"name\": \"James Miller\",\n            \"age\": 54,\n            \"phoneNumber\": \"07700900345\",\n            \"farmId\": 1535538\n        }"
+						},
+						"url": {
+							"raw": "localhost:8080/farms/farmers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"farmers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Farmer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/farms/farmers/123",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"farms",
+								"farmers",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
